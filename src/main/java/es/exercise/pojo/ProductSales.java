@@ -16,4 +16,9 @@ public class ProductSales {
     public Double getSalesAmount() {
         return salesAmount;
     }
+
+	@Override
+	public String toString() {
+		return "ProductSales [productId=" + productId + ", salesAmount=" + salesAmount + "]";
+	}
 }

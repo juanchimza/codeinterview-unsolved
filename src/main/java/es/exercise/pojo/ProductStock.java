@@ -17,4 +17,9 @@ public class ProductStock {
         return availableStock;
     }
 
+	@Override
+	public String toString() {
+		return "ProductStock [productId=" + productId + ", availableStock=" + availableStock + "]";
+	}
+
 }
