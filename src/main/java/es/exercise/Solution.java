@@ -11,8 +11,8 @@ public class Solution {
                                                   List<ProductStock> productsStockInformation,
                                                   List<ProductSales> productsSalesInformation) {
 
-        //TODO: Complete this method with the solution, you don't need to split your solution over multiple classes,
-        // just get it done!
+        
+    	
         return new ArrayList<>();
     }
 
