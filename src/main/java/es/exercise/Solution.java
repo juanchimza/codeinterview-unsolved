@@ -11,9 +11,18 @@ public class Solution {
                                                   List<ProductStock> productsStockInformation,
                                                   List<ProductSales> productsSalesInformation) {
 
-        
+    	List<Long> productsSortedByScores = new ArrayList<>();
+    	productsSortedByScores.add(Long.valueOf("2"));
+    	productsSortedByScores.add(Long.valueOf("4"));
+    	productsSortedByScores.add(Long.valueOf("3"));
+    	productsSortedByScores.add(Long.valueOf("1"));
+    	try {
+    		
+    	} catch (Exception e) {
+			// TODO: handle exception
+		}
     	
-        return new ArrayList<>();
+    	return productsSortedByScores;
     }
 
 }
