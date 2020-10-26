@@ -1,0 +1,31 @@
+En nuestra pequeña compañía de venta de productos online actualmente vendemos productos de todo tipo, agrupados por categorías (libros, videoconsolas, portátiles, relojes, camisetas, etc, etc).
+
+Esta misma semana se ha cerrado un trato con 5 nuevos proveedores de productos comestibles, por lo que el número de categorías a mantener se multiplicará en las próximas semanas.
+
+Hasta ahora, el departamento de marketing se encargaba de ordenar los productos en las categorías, eligiendo a ojo de buen cubero un orden que diese buenas ventas. 
+
+Tras el anuncio marketing ha decidido, como es tradición, escurrir el bulto al departamento de sistemas, solicitando una manera de automatizar la ordenación de categorías.
+
+Como buen ingenier@ de software que eres, aceptas el reto sin pensarlo dos veces, es más, prometes tener una pequeña demo del revolucionario algoritmo funcionando en menos de 3 horas. Los requisitos de marketing son los siguientes:
+
+- Dada una lista de productos con su stock actual y una lista de productos y sus ventas de las últimas 72h (en € totales) se requiere devolver una lista de productos ordenados de mayor a menor.
+- La ordenación será en función de las ventas y el stock, con un valor de ponderación configurable (por ejemplo, 25% de peso a las ventas y 75% de peso al stock disponible)
+
+Ejemplo:
+
+50% de peso para las ventas, 50% de peso para el stock.
+
+Producto 1 -> 50.000€ vendidos, 100.000 en stock.
+Producto 2 -> 100.000€ vendidos, 400.000 en stock.
+Producto 3 -> 100.000€ vendidos, 200.000 en stock.
+Producto 4 -> 75.000€ vendidos, 300.000 en stock.
+
+Resultado: [2, 4, 3, 1]
+
+
+Para ayudarte con el desarrollo, tu compañero de mesa te ha enviado un proyecto Maven con el esqueleto del algoritmo ya montado. Sólo has de desarrollar la lógica de negocio en la clase Solution.java. Además, te ha incluido muy amablemente un test de JUnit con el ejemplo proveído por márketing para validar el funcionamiento del algoritmo.
+
+
+
+
+
