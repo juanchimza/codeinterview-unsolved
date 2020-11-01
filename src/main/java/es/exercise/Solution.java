@@ -5,7 +5,6 @@ import es.exercise.pojo.ProductStock;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Solution {
 
@@ -13,19 +12,19 @@ public class Solution {
                                                   List<ProductStock> productsStockInformation,
                                                   List<ProductSales> productsSalesInformation) {
 
-    	Map<Long, Double> ratedProducts = new HashMap<>();
+    	Map<Long, Double> ratedProducts;
     	List<Long> productsSortedByScores = new ArrayList<>();
-    	List<Double> scores = new ArrayList<>();
+    	List<Double> scores;
     	
     	try {
     	
-    		ratedProducts = productsStockInformation.stream().collect(Collectors.toMap(ProductStock::getProductId,stock -> Double.valueOf(stock.getAvailableStock()*stockWeight/100)));
+    		ratedProducts = productsStockInformation.stream().collect(Collectors.toMap(ProductStock::getProductId,stock -> Double.valueOf(stock.getAvailableStock() * stockWeight / 100)));
     		
     		for (ProductSales product : productsSalesInformation) {
     			ratedProducts.computeIfPresent(product.getProductId(), (key, value) -> value+product.getSalesAmount()*salesWeight/100);
 			}
     		
-    		scores = ratedProducts.values().stream().collect(Collectors.toList());
+    		scores = new ArrayList<>(ratedProducts.values());
     		
     		while (productsSortedByScores.size()<productsStockInformation.size()) {
     			Double maxValue = scores.stream()
